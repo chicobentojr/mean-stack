@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+header {
+  margin: 0 !important;
+  padding: .5em 3em .5em 3em;
+  background: #ff5252;
+  color:white;
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+main {
+  margin: 2em auto;
+  width: 1024px;
+}

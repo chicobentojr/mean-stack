@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>MEAN Stack</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+<body ng-app="meanStack" ng-controller="MainController">
+
+	<my-header>Avengers</my-header>
+	<main>
+		<div ng-view></div>
+	</main>
+
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script>
+		angular
+			.module('meanStack', ['ngRoute'])
+			.config(function($routeProvider){
+				$routeProvider
+					.when('/hello',{controller: 'HelloController',template: '<h1>Hello World!</h1>'})
+					.when('/',{controller: 'MainController',templateUrl: 'avengers.html'})
+					.otherwise({redirectTo: '/'})
+			});
+		angular
+			.module('meanStack')
+			.controller('MainController', function($scope) {
+				$scope.title = 'Page title';
+
+				$scope.avengers =
+					[
+						{name: 'Spider Man', visible: true},
+						{name: 'Captain America', visible: true},
+						{name: 'Black Panther', visible: true},
+						{name: 'Iron Man', visible: false},
+					];
+
+				$scope.addAvenger = function(name){
+					$scope.avengers.push({name: name, visible: true});
+				};
+			});
+
+		angular
+			.module('meanStack')
+			.directive('myHeader', function(){
+				return {
+					restrict: 'E',
+					replace: true,
+					transclude: true,
+					scope: {
+						title: '@'
+					},
+					template: '<header ng-transclude>{{title}}</header>'
+				}
+			});
+
+	</script>
+</body>
+</html>

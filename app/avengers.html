@@ -1,0 +1,12 @@
+<a href="#/hello">Hi!</a>
+<br/>
+
+<h1>{{title}}</h1>
+
+<input type="text" placeholder="type here to search for an avenger" ng-model="filter" />
+<ul>
+  <li ng-repeat="avenger in avengers | filter:filter" ng-show="avenger.visible">{{avenger.name}}</li>
+</ul>
+
+<input type="text" placeholder="Avenger's name" ng-model="avengerName" />
+<button ng-click="addAvenger(avengerName)">Add Avenger</button>
