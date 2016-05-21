@@ -9,8 +9,9 @@
   "author": "Francisco Bento",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "body-parser": "~1.15.1",
     "express": "~4.13.4",
     "express-load": "~1.1.15",
-    "body-parser": "~1.15.1"
+    "open": "0.0.5"
   }
 }
