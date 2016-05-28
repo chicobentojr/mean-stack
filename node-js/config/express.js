@@ -9,6 +9,7 @@ module.exports = function() {
   app.use(bodyParser());
 
   load('models', {cwd:'app'})
+    .then('models')
     .then('controllers')
     .then('routes')
     .into(app);
