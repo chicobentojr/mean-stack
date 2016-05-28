@@ -8,6 +8,10 @@
 - 2nd Day 2016-05-21: `nodejs` `express`
 - 3rd Day 2016-05-28: `mongodb`
 
+## Localization
+
+Instituto Metrópole Digital - UFRN - Avenida Capitão-Mor Gouveia - Lagoa Nova, Natal - Rio Grande do Norte, Brazil 
+
 ## Organization
 
 - [Clayton Fidelis](https://github.com/FidelisClayton)
